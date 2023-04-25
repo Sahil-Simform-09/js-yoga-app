@@ -13,12 +13,8 @@ const removeMenu = function() {
     navMenu.classList.remove("active");
 }
 navMenu.addEventListener("click", removeMenu);
+document.querySelector(".nav-menu").addEventListener("click", removeMenu);
 
-// carousel funcionality
-const slides = document.querySelectorAll(".slide");
+//carousel functionality
 
-// loop through slides and set each slides translateX property to index * 100% 
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
-});
-
+document.querySelector(".btn").scrollLeft

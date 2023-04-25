@@ -17,7 +17,10 @@ a {
     text-decoration: none;
     color: black;
 }
-#about, #services, #images {
+#home {
+    height: 100vh;
+}
+#about, #services, #images{
     height: calc(100vh - 75px);
 }
 
@@ -61,17 +64,18 @@ a {
 }
 .nav-logo {
     font-size: 3rem;
+    opacity: .5;
     font-weight: 500;
 }
+
 /*------------- home page content style --------------*/
 .heading {
     padding: 15rem 0 10rem;
     display: flex;
     justify-content: center;
 }
-.yoga-img svg{
+.yoga-img img{
     width: 60rem;
-    user-select: none;
 }
 .heading > * {
     margin: 10rem;
@@ -86,12 +90,37 @@ a {
 }
 
 /*------------- carousel style --------------*/
-/* .carousel {
-    height: 100vh;
+.wrapper {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+} 
+.button-wrapper {
+    width: 100vw;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #f2f2f2;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+/* .carousel {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease;
+} */
+.card {
+    background: black;
+    width: 500px;
+    height: 200px;
+    margin-right: 1rem;
+    display: inline-block;
 }
 .content .card .image {
     height: 200px;
@@ -103,19 +132,23 @@ a {
     width: 100%;
     object-fit: cover;
 }
-.card {
+.card-div {
     background-color: #ffff;
 }
-.card .card-content {
+.card-div .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px;
     font-size: 3rem;
-} */
+}
 
 /*------------- service page style --------------*/
-
+.service {
+    padding-top: 150px;
+    margin: 500px 0 250px 0px;
+    padding-bottom: 150px;
+}
 .service-container {
     display: flex;
     justify-content: space-around;
@@ -170,15 +203,16 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+}
+.first {
+    display: none;
+}
+.about-detail .second{
     padding: 0 100px 200px 70px;
     font-size: 7rem;
 }
-.about-detail span {
-    color: rgb(19, 85, 97);
-}
 
-
-/*------------- media queries --------------*/
+/*------------- media queries for Tablet --------------*/
 @media only screen and (max-width: 1281px) {
     /*------------- meadia query for heading --------------*/
     .heading, .service-container{
@@ -187,9 +221,16 @@ a {
         align-items: center;
         padding: 10rem 0 1rem;
     }
+    .yoga-img img {
+        width: 40rem;
+        height: 30.5rem;
+    }
+    .yoga-img {
+        margin: 100px 0;
+    }
 
      /*------------- meadia query for services --------------*/
-     #services {
+    #services, #about, #home{
         height: auto;
     }
     .service > h1 {
@@ -213,7 +254,26 @@ a {
     .quot p {
         font-size: 2.5rem;
     }
+    .service {
+        padding-bottom: 50px;
+    }
+    
+    .about-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .first {
+        display: block;
+    }
+    .about-detail .second, .about-detail .first{
+        font-size: 4rem;
+        padding: 300px 30px 70px 50px;
+    }
 }
+
+/*------------- media queries for phone --------------*/
 @media only screen and (max-width: 770px) {
     /*------------- meadia query for navbar --------------*/
     .nav-menu {
@@ -262,5 +322,14 @@ a {
     /*------------- meadia query for service --------------*/
     .service-card {
         width: 60%;
+    }
+
+    /*------------- meadia query for about-us --------------*/
+    .about-detail .first, .about-detail .second{
+        font-size: 3rem;
+        padding: 250px 30px 70px 50px;
+    }
+    .second {
+        padding: 10px;
     }
 }

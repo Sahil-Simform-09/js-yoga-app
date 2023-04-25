@@ -1,0 +1,266 @@
+/*------------- default style --------------*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#about, #services, #images {
+    height: calc(100vh - 75px);
+}
+
+/*------------- navbar style --------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    background-color:rgb(145, 199, 206);
+    width: 100%;
+    color: black;
+    position: fixed;
+    width: 100%;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item {
+    margin-left: 5rem;
+}
+.nav-link{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #475569;
+}
+.nav-link:hover{
+    color:rgb(24, 105, 138);
+}
+.nav-logo {
+    font-size: 3rem;
+    font-weight: 500;
+}
+/*------------- home page content style --------------*/
+.heading {
+    padding: 15rem 0 10rem;
+    display: flex;
+    justify-content: center;
+}
+.yoga-img svg{
+    width: 60rem;
+    user-select: none;
+}
+.heading > * {
+    margin: 10rem;
+}
+.quot *{
+    font-size: 2.3rem;
+    line-height: 4rem;
+}
+.advantage {
+    margin-top: 3rem;
+    color: rgb(19, 85, 97);
+}
+
+/*------------- carousel style --------------*/
+/* .carousel {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f2f2f2;
+}
+.content .card .image {
+    height: 200px;
+    width: 400px;
+    padding: 3px;
+}
+.content .card .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card {
+    background-color: #ffff;
+}
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    font-size: 3rem;
+} */
+
+/*------------- service page style --------------*/
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+.service > h1 {
+    font-size: 6rem;
+    text-align: center;
+    color:rgb(24, 105, 138);
+    margin: 0 0 100px 0;
+}
+.service-card {
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 6px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-card h3 {
+    font-size: 2.5rem;
+    background: #f5f5f5;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+}
+.desc {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+.desc p {
+    line-height: 30px;
+}
+
+/*------------- about-us page style --------------*/
+#about {
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210805/pngtree-halftone-business-abstract-dots-pop-art-simple-white-gray-gradient-background-image_756003.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-detail {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 100px 200px 70px;
+    font-size: 7rem;
+}
+.about-detail span {
+    color: rgb(19, 85, 97);
+}
+
+
+/*------------- media queries --------------*/
+@media only screen and (max-width: 1281px) {
+    /*------------- meadia query for heading --------------*/
+    .heading, .service-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10rem 0 1rem;
+    }
+
+     /*------------- meadia query for services --------------*/
+     #services {
+        height: auto;
+    }
+    .service > h1 {
+        margin: 0;
+    }
+    .service-container {
+        padding: 0;
+        margin: 0;
+    }
+    .service-card {
+        width: 40%;
+        margin-top: 50px;
+    }
+    .service-card p {
+        font-size: 1.5rem;
+    }
+    .heading svg{
+        width: 350px;
+        height: 350px;
+    }
+    .quot p {
+        font-size: 2.5rem;
+    }
+}
+@media only screen and (max-width: 770px) {
+    /*------------- meadia query for navbar --------------*/
+    .nav-menu {
+        position: absolute;             
+        left: -100%;
+        top: 6.7rem;
+        border-top: 1px solid black;
+        flex-direction: column;
+        background-color:rgb(145, 199, 206);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .hamburger {
+        user-select: none;
+        display: block;
+        cursor: pointer;
+    }
+    .nav-logo {
+        font-size: 2.5rem;
+    }
+    .nav-link{
+        font-size: 1.5rem;
+    }
+    .quot p {
+        font-size: 2rem;
+    }
+    /*------------- meadia query for heading --------------*/
+    .heading {
+        padding: 10rem 0 1rem;
+    }
+    .heading svg{
+        width: 200px;
+        height: 200px;
+    }
+    .quot {
+        margin: 5rem;
+    }
+
+    /*------------- meadia query for service --------------*/
+    .service-card {
+        width: 60%;
+    }
+}

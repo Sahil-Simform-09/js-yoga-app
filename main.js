@@ -27,8 +27,8 @@ const carousel = document.querySelector(".carousel"),
 let width = card.offsetWidth;
 
 next.addEventListener("click", e => {
-    carousel.scrollBy(card.offsetWidth + 20, 0);
+    carousel.scrollBy(card.offsetWidth + 12, 0);
 });
 prev.addEventListener("click", e => {
-  carousel.scrollBy(-(card.offsetWidth + 20), 0);
+  carousel.scrollBy(-(card.offsetWidth + 12), 0);
 });

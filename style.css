@@ -390,4 +390,9 @@ h1 {
     .second {
         padding: 10px;
     }
+
+    /*------------- meadia query for carousel --------------*/
+    .card img {
+        width: 100vw;
+    }
 }

@@ -16,5 +16,19 @@ navMenu.addEventListener("click", removeMenu);
 document.querySelector(".nav-menu").addEventListener("click", removeMenu);
 
 //carousel functionality
+// Select the carousel you'll need to manipulate and the buttons you'll add events to
 
-document.querySelector(".btn").scrollLeft
+const carousel = document.querySelector(".carousel"),
+  content = document.querySelector(".content"),
+  card = document.querySelector(".card"),
+  next = document.querySelector(".next"),
+  prev = document.querySelector(".prev");
+
+let width = card.offsetWidth;
+
+next.addEventListener("click", e => {
+    carousel.scrollBy(card.offsetWidth + 20, 0);
+});
+prev.addEventListener("click", e => {
+  carousel.scrollBy(-(card.offsetWidth + 20), 0);
+});

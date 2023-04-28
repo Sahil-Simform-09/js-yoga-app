@@ -122,7 +122,10 @@ h1 {
 .card img {
     width: 630px;
     height: 400px;
-    padding: 10px;
+    padding: 20px 20px 20px 0;
+}
+.first-card img{
+    padding: 20px 20px 20px 20px;
 }
 .wrapper {
     width: 100%;

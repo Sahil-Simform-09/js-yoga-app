@@ -8,45 +8,53 @@ const mobileMenu = function () {
 }  
 hamburger.addEventListener("click", mobileMenu);
 
-const removeMenu = function() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
 navMenu.addEventListener("click", removeMenu);
 document.querySelector(".nav-menu").addEventListener("click", removeMenu);
 
-//carousel functionality
+// scroll functinality
+const links = document.querySelectorAll("a");
+links.forEach( link => {
+link.addEventListener("click", event => {
+
+    //get target div
+    let targetId = link.getAttribute("href");
+    let targetDiv = document.querySelector(targetId);
+
+    //apply scroll functionality
+    targetDiv.scrollIntoView({
+      behavior: "smooth",
+    });
+
+    history.pushState(null , null, targetId);
+    event.preventDefault();
+  });
+});
+
+// carousel functionality
 const carousel = document.querySelector(".carousel"),
-  content = document.querySelector(".content"),
   card = document.querySelector(".card"),
   next = document.querySelector(".next"),
   prev = document.querySelector(".prev");
 
-let width = card.offsetWidth;
+let width = card.offsetWidth + 12;
 
 next.addEventListener("click", e => {
-    carousel.scrollBy(card.offsetWidth + 12, 0);
-});
+  carousel.scrollBy(width , 0); 
+  if (carousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (carousel.scrollLeft === width*2) {
+    next.style.display = "none";
+  }
+});  
 prev.addEventListener("click", e => {
-  carousel.scrollBy(-(card.offsetWidth + 12), 0);
-});
-
-//scroll functinality
-const links = document.querySelectorAll("a");
-links.forEach( link => {
-  link.addEventListener("click", event => {
-
-      //get target div
-      let targetId = link.getAttribute("href");
-      let targetDiv = document.querySelector(targetId);
-
-      //apply scroll functionality
-      targetDiv.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-
-      history.pushState({name: "sahil"}, null, targetId);
-      event.preventDefault();
-  });
+    arousel.scrollBy(-width, 0);
+  if (carousel.scrollLeft === width) {
+    prev.style.display = "none";
+  }
+  if (carousel.scrollLeft > 0) {
+    next.style.display = "flex";
+  }
 });

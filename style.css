@@ -9,7 +9,6 @@ html {
     font-size: 62.5%;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto', sans-serif;
 }
 li {
     list-style: none;
@@ -25,7 +24,7 @@ a {
     height: calc(100vh - 86px);
 }
 h1 {
-    color:rgb(24, 105, 138);
+    color:rgba(24, 106, 138, 0.726);
 }
 
 /*------------- navbar style --------------*/
@@ -35,7 +34,6 @@ h1 {
     align-items: center;
     padding: 0rem 1.5rem;
     background-color:rgb(145, 199, 206);
-    width: 100%;
     color: black;
     position: fixed;
     width: 100%;
@@ -104,7 +102,7 @@ h1 {
     align-items: center;
     flex-direction: column;
 }
-.content, .card {
+.carousel, .card {
     display: flex;
     align-items: center;
     align-items: center;
@@ -154,6 +152,7 @@ h1 {
 }
 .prev {
     left: 0;
+    display: none;
   }
 .next {
     right: 0;

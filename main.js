@@ -48,9 +48,6 @@ const carousel = function () {
   next.addEventListener("click", () => {
     
     let totalScrollWidth = carousel.offsetWidth < 415 ? width*4 : width*2;
-    
-    console.log(carousel.scrollLeft);
-    console.log(totalScrollWidth);
 
     carousel.scrollBy(width , 0); 
     if (carousel.scrollWidth !== 0) {

@@ -17,12 +17,6 @@ a {
     text-decoration: none;
     color: black;
 }
-#home {
-    height: 100vh;
-}
-#about, #services, #images{
-    height: calc(100vh - 86px);
-}
 h1 {
     color:rgba(24, 106, 138, 0.726);
 }
@@ -217,7 +211,7 @@ h1 {
     margin-top: 150px;
 }
 .about-detail {
-    height: 100%;
+    padding-top: 450px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -289,6 +283,13 @@ h1 {
         font-size: 4rem;
         padding: 300px 30px 70px 50px;
     }
+    .about-detail {
+        padding-top: 350px;
+    }
+    /*------------- meadia query for carousel --------------*/
+    .card img {
+        width: 50vw;
+    }    
 }
 
 /*------------- media queries for phone --------------*/
@@ -351,10 +352,13 @@ h1 {
     /*------------- meadia query for about-us --------------*/
     .about-detail .first, .about-detail .second{
         font-size: 3rem;
-        padding: 240px 30px 30px 20px;
+        padding: 240px 30px 100px 20px;
     }
     .second {
         padding: 10px;
+    }
+    .about-detail {
+        padding-top: 20px;
     }
 
     /*------------- meadia query for carousel --------------*/

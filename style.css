@@ -1,0 +1,364 @@
+/*------------- default style --------------*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#home {
+    height: 100vh;
+}
+#about, #services, #images{
+    height: calc(100vh - 86px);
+}
+h1 {
+    color:rgba(24, 106, 138, 0.726);
+}
+
+/*------------- navbar style --------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    background-color:rgb(145, 199, 206);
+    color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item {
+    margin-left: 5rem;
+}
+.nav-link{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #475569;
+}
+.nav-link:hover{
+    color:rgb(24, 105, 138);
+}
+.nav-logo img{
+    opacity: .8;
+}
+
+/*------------- home page content style --------------*/
+.heading {
+    padding: 15rem 0 10rem;
+    display: flex;
+    justify-content: center;
+}
+.yoga-img img{
+    width: 60rem;
+}
+.heading > * {
+    margin: 10rem;
+}
+.quot *{
+    font-size: 2.3rem;
+    line-height: 4rem;
+}
+.advantage {
+    margin-top: 3rem;
+    color: rgb(19, 85, 97);
+}
+
+/*------------- carousel style --------------*/
+.img-carousel h1 {
+    padding: 150px 0;
+    font-size: 4rem;
+}
+.img-carousel {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.carousel, .card {
+    display: flex;
+    align-items: center;
+    align-items: center;
+}
+.carousel {
+    width: 100%;
+}
+.card {
+    height: 100%;
+    margin-right: 1rem;
+    flex-direction: column;
+} 
+.card p {
+    font-size: 2rem;
+    padding: 15px;
+}
+.card img {
+    width: 630px;
+    height: 400px;
+    padding: 20px 20px 20px 0;
+}
+.first-card img{
+    padding: 20px 20px 20px 20px;
+}
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+.carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+    height: 0;
+}
+.prev, .next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 20px;
+    top: 50%;
+}
+.prev {
+    left: 0;
+    display: none;
+  }
+.next {
+    right: 0;
+}
+
+/*------------- service page style --------------*/
+.service {
+    padding-top: 150px;
+}
+.service-container-1, .service-container-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.service-container-2 {
+    padding-top: 100px;
+}
+.service > h1 {
+    font-size: 6rem;
+    text-align: center;
+    margin: 0 0 100px 0;
+}
+.service-card {
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 6px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+.desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-card h3 {
+    font-size: 2.5rem;
+    background: #f5f5f5;
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+}
+.desc {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+.desc p {
+    line-height: 30px;
+}
+
+/*------------- about-us page style --------------*/
+#about {
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210805/pngtree-halftone-business-abstract-dots-pop-art-simple-white-gray-gradient-background-image_756003.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 150px;
+}
+.about-detail {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.first {
+    display: none;
+}
+.about-detail .second{
+    padding: 0 100px 200px 70px;
+    font-size: 7rem;
+}
+
+/*------------- media queries for Tablet --------------*/
+@media only screen and (max-width: 1281px) {
+    /*------------- meadia query for heading --------------*/
+    .heading, .service-container-1, .service-container-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10rem 0 1rem;
+    }
+    .yoga-img img {
+        width: 40rem;
+        height: 30.5rem;
+    }
+    .yoga-img {
+        margin: 100px 0;
+    }
+
+     /*------------- meadia query for services --------------*/
+    #services, #about, #home{
+        height: auto;
+    }
+    .service > h1 {
+        margin: 0;
+    }
+    .service-container-1, .service-container-2{
+        padding: 0;
+        margin: 0;
+    }
+    .service-card {
+        width: 40%;
+        margin-top: 50px;
+    }
+    .service-card p {
+        font-size: 1.5rem;
+    }
+    .heading svg{
+        width: 350px;
+        height: 350px;
+    }
+    .quot p {
+        font-size: 2.5rem;
+    }
+    .service {
+        padding-bottom: 50px;
+    }
+    
+    .about-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .first {
+        display: block;
+    }
+    .about-detail .second, .about-detail .first{
+        font-size: 4rem;
+        padding: 300px 30px 70px 50px;
+    }
+}
+
+/*------------- media queries for phone --------------*/
+@media only screen and (max-width: 770px) {
+    /*------------- meadia query for navbar --------------*/
+    .header {
+        width: 100vw;
+    }
+    .nav-menu {
+        position: absolute;             
+        left: -100%;
+        top: 8.5rem;
+        border-top: 1px solid black;
+        flex-direction: column;
+        background-color:rgb(145, 199, 206);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .hamburger {
+        user-select: none;
+        display: block;
+        cursor: pointer;
+    }
+    .nav-logo img{
+        font-size: 2.5rem;
+    }
+    .nav-link{
+        font-size: 1.5rem;
+    }
+    .quot p {
+        font-size: 2rem;
+    }
+    /*------------- meadia query for heading --------------*/
+    .heading {
+        padding: 10rem 0 1rem;
+    }
+    .heading svg{
+        width: 200px;
+        height: 200px;
+    }
+    .quot {
+        margin: 5rem;
+    }
+
+    /*------------- meadia query for service --------------*/
+    .service {
+        padding-top: 200px;
+    }
+    .service-card {
+        width: 90%;
+    }
+
+    /*------------- meadia query for about-us --------------*/
+    .about-detail .first, .about-detail .second{
+        font-size: 3rem;
+        padding: 240px 30px 30px 20px;
+    }
+    .second {
+        padding: 10px;
+    }
+
+    /*------------- meadia query for carousel --------------*/
+    .card img {
+        width: 100vw;
+    }
+}
